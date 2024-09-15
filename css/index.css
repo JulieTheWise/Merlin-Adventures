@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'DragonSlayer';
+    src: URL("../src/general_format/DragonSlayer-2Oe7d.ttf") format('truetype');
+}
+
+body {
+    font-family: DragonSlayer;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+img {
+    display: block;
+    width: 100%;
+    
+}
+
+.centre {
+    display:block;
+    text-align: center;
+}
+
+.startButton {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    position: absolute;
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.startButton:hover {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    position: absolute;
+}
+
+.crossedSwords {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: grayscale(100%);
+    mix-blend-mode: lighten;
+    position:absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.titleFormat1 {
+    opacity: 1;
+    display: block;
+    color: white;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
