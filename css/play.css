@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(40, 40, 40);
 }
 
@@ -58,6 +58,7 @@ a:link {
 }
 
     .PCChat {
+        font-style: italic;
         font-family: bookMania-reg;
         color: white;
         margin-top: 0px;
@@ -66,6 +67,7 @@ a:link {
     }
 
     .NPCChat {
+        font-style: italic;
         text-align: right;
         font-family: bookMania-reg;
         color: white;
@@ -94,7 +96,7 @@ a:link {
     }
 
 /* Input UI */
-.inputUI {
+#inputUI {
     display: block;
     position: absolute;
     justify-content: center;
@@ -109,70 +111,14 @@ a:link {
     transform: translate(-50%, 50%);
 }
 
-    #opCover {
-        position: absolute;
-        width: 100%;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        background-color: rgb(60, 60, 60);;
-        z-index: 4;
-    }
+.btn1 {
+    position: absolute;
+    bottom: 200%;
+    left: 100%;
+}
 
-    .inputUI:hover > #hoverDetect {
-        transform: scale(4);
-        margin-bottom: 80%;
-    }
-
-    #hoverDetect {
-        position: absolute;
-        width: 100%;
-        aspect-ratio: 2/1;
-        border-radius: 10rem 10rem 0 0;
-        bottom: 50%;
-    }
-
-    .inputUI:hover > #op1 {
-        transform: rotate(-60deg) translate(150%) rotate(60deg) translate(-16%)/*66*/;
-        border-radius: 10%;
-        width: 150%;
-    }
-
-    #hoverDetect:hover + #op1 {
-        transform: rotate(-60deg) translate(150%) rotate(60deg) translate(-16%)/*66*/;
-        border-radius: 10%;
-        width: 150%;
-    }
-
-    #op1 {
-        display: block;
-        position: absolute;
-        width: 100%;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        background-color: rgb(60, 60, 60);
-        transition: transform .8s, width .8s, border-radius .8s;
-        z-index: 2;
-    }
-
-    .inputUI:hover > #op2 {
-        transform: rotate(60deg) translate(-150%) rotate(-60deg) translate(-16%)/*66*/;
-        border-radius: 10%;
-        width: 150%;
-    }
-
-    #hoverDetect:hover + #op2 {
-        transform: rotate(60deg) translate(-150%) rotate(-60deg) translate(-16%)/*66*/;
-        border-radius: 10%;
-        width: 150%;
-    }
-
-    #op2 {
-        display: block;
-        position: absolute;
-        width: 100%;
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        background-color: rgb(60, 60, 60);
-        transition: transform .8s, width .8s, border-radius .8s;
-        z-index: 2;
-    }
+.btn2 {
+    position: absolute;
+    bottom: 200%;
+    left: -100%;
+}

@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'DragonSlayer';
     src: URL("../src/general_format/DragonSlayer-2Oe7d.ttf") format('truetype');
@@ -8,7 +12,7 @@ body {
     letter-spacing: 3px;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -31,12 +35,13 @@ img {
     justify-self: center;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
     position: absolute;
     transition-property: width;
     transition-duration: 1s;
+    transform: (-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .startButton:hover {
@@ -50,16 +55,17 @@ img {
     position: absolute;
 }
 
-.crossedSwords {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#crossedSwords {
+    display: flex;
     filter: grayscale(100%);
     mix-blend-mode: lighten;
-    position:absolute;
+    position: absolute;
     z-index: -1;
-    width: 100%;
-    opacity: 0.4;
+    width: 20%;
+    opacity: 0.3;
+    transform: (-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .titleFormat1 {
@@ -67,8 +73,9 @@ img {
     display: block;
     color: white;
     position: absolute;
-    z-index: 0;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
 }
