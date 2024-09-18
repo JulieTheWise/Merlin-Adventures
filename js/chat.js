@@ -5,14 +5,20 @@ var textNodes = [
         id: 1,
         options: [
             {
-                id:1,
-                text: "walk away",
+                text: "walk away adn do some more stuff to test the sytem when there is a lot of words",
                 exitid: 1
             },
             {
-                id: 2,
                 text: "Say: Not quite, I'm more of a nomad.",
                 exitid: 2
+            },
+            {
+                text: "hello test button",
+                exitid: 2
+            },
+            {
+                text: "yet another one this is the max tho dw",
+                exitid: 3
             }
         ],
         exitids: [
@@ -38,7 +44,7 @@ function ShowNextScene(sceneNumber) {
     textNode.options.forEach(option => {
           const button = document.createElement('button')
           button.innerText = option.text
-          button.classList.add('btn' + option.id)
+          button.classList.add('btn')
           /*button.addEventListener('click', () => selectOption(option))*/
           inputUIElement.appendChild(button)
       })
