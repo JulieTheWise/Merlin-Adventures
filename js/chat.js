@@ -1,24 +1,20 @@
 const inputUIElement = document.getElementById('inputUI')
 
+fetch('../plots/plot.json')
+.then((response) => response.json())
+.then((json) => console.log(json))
+
 var textNodes = [
     {
         id: 1,
         options: [
             {
-                text: "walk away adn do some more stuff to test the sytem when there is a lot of words",
-                exitid: 1
+                text: "testing testin",
+                exitid: 2,
             },
             {
-                text: "Say: Not quite, I'm more of a nomad.",
-                exitid: 2
-            },
-            {
-                text: "hello test button",
-                exitid: 2
-            },
-            {
-                text: "yet another one this is the max tho dw",
-                exitid: 3
+                text: "onother button",
+                exitid: 3,
             }
         ],
         exitids: [
@@ -29,6 +25,24 @@ var textNodes = [
             {
                 class: "NPCChat",
                 text: "Sounds like a good life"
+            }
+        ]
+    },
+    {
+        id: 2,
+        options: [
+            {
+                text: "the next one",
+                exitid: 3
+            }
+        ]
+    },
+    {
+        id: 3,
+        options: [
+            {
+                text: "the third",
+                exitid: 0
             }
         ]
     }
@@ -45,9 +59,23 @@ function ShowNextScene(sceneNumber) {
           const button = document.createElement('button')
           button.innerText = option.text
           button.classList.add('btn')
-          /*button.addEventListener('click', () => selectOption(option))*/
+          button.addEventListener('click', () => selectOption(option))
           inputUIElement.appendChild(button)
-      })
+        })
+}
+
+function selectOption(option) {
+    const exitId = option.exitid
+    if (exitId <= 0) {
+        return startGame()
+    }
+    /*
+    state = Object.assign(state, option.setState)*/
+    ShowNextScene(exitId)
+}
+
+function startGame() {
+    ShowNextScene(1)
 }
 
 ShowNextScene(1)
