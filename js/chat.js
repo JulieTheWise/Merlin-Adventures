@@ -1,9 +1,23 @@
 const inputUIElement = document.getElementById('inputUI')
+const textBoxElement = document.getElementById('text')
+
+var textNodes = null
 
 fetch('../plots/plot.json')
-.then((response) => response.json())
-.then((json) => console.log(json))
+.then(function (response) {
+    return response.json()
+})
+.then(function (obj) {
+    console.log(obj)
+    textNodes = obj
+    startGame()
+    })
+.catch(function (error) {
+    console.error(error)
+})
 
+
+/*
 var textNodes = [
     {
         id: 1,
@@ -11,20 +25,21 @@ var textNodes = [
             {
                 text: "testing testin",
                 exitid: 2,
+                exitText: [
+                    {
+                        class: "NPCChat",
+                        text: "You Leave. <br> The End."
+                    },
+                    {
+                        class: "PCChat",
+                        text: "har ahhr"
+                    }
+                ]
             },
             {
                 text: "onother button",
                 exitid: 3,
-            }
-        ],
-        exitids: [
-            {
-                class: "narrator",
-                text: "You Leave. <br> The End."
-            },
-            {
-                class: "NPCChat",
-                text: "Sounds like a good life"
+                exitText: null
             }
         ]
     },
@@ -47,6 +62,8 @@ var textNodes = [
         ]
     }
 ]
+*/
+
 
 function ShowNextScene(sceneNumber) {
     const textNode = textNodes.find(textNodes => textNodes.id === sceneNumber)
@@ -56,26 +73,32 @@ function ShowNextScene(sceneNumber) {
     }
 
     textNode.options.forEach(option => {
-          const button = document.createElement('button')
-          button.innerText = option.text
-          button.classList.add('btn')
-          button.addEventListener('click', () => selectOption(option))
-          inputUIElement.appendChild(button)
-        })
+        const button = document.createElement('button')
+        button.innerText = option.text
+        button.classList.add('btn')
+        button.addEventListener('click', () => selectOption(option))
+        inputUIElement.appendChild(button)
+    })
 }
 
 function selectOption(option) {
     const exitId = option.exitid
+    const exitTexts = option.exitText
     if (exitId <= 0) {
         return startGame()
     }
-    /*
-    state = Object.assign(state, option.setState)*/
+
+    if (exitTexts != null) {
+        exitTexts.forEach(exitText => { 
+            const text = document.createElement('p')
+            text.innerHTML = exitText.text
+            text.classList.add(exitText.class)
+            textBoxElement.appendChild(text)
+        })
+    }
     ShowNextScene(exitId)
 }
 
 function startGame() {
     ShowNextScene(1)
 }
-
-ShowNextScene(1)

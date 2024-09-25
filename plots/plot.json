@@ -1,0 +1,51 @@
+
+[
+    {
+        "id" : "startGame",
+        "exitid" : 1
+    },
+    {
+        "id" : 1,
+        "options" : [
+            {
+                "text" : "Say: Something like that",
+                "exitid" : 2,
+                "exitText" : [
+                    {
+                        "class" : "PCChat",
+                        "text" : "Something like that"
+                    },
+                    {
+                        "class" : "NPCChat",
+                        "text" : "sounds like a good life"
+                    }
+                ]
+            },
+            {
+                "text" : "a button cuz im a lazy programmer who doesen't want write more story right now",
+                "exitid" : 2,
+                "exitText" : [
+                    {
+                        "class" : "PCChat",
+                        "text" : "hellossssssssssssoo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "options" : [
+            {
+                "text" : "guh",
+                "exitid" : 0,
+                "exitText" : [
+                    {
+                        "class" : "NCChat",
+                        "text" : "you made it to the end"
+                    }
+                ]
+            }
+        ]
+    }
+]
