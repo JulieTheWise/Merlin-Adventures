@@ -52,9 +52,17 @@
                 ]
             },
             {
-                "text" : "I'm just passing through",
+                "text" : "Say: I'm just passing through",
                 "exitid" : 3,
                 "exitText" : [
+                    {
+                        "class" : "PCNameplate",
+                        "text" : "You"
+                    },
+                    {
+                        "class" : "PCChat",
+                        "text" : "I'm just passing through"
+                    },
                     {
                         "class" : "NPCNameplate",
                         "text" : "Old Man"
@@ -80,8 +88,12 @@
         "options" : [
             {
                 "text" : "Say: More of a wandering soul, I've got no place to be, and no thing that I must do",
-                "exitid" : 0,
+                "exitid" : 10,
                 "exitText" : [
+                    {
+                        "class" : "narNameplate",
+                        "text" : "Narrator"
+                    },
                     {
                         "class" : "nar",
                         "text" : "you made it to the end"
