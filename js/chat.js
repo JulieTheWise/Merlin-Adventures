@@ -84,7 +84,7 @@ function ShowNextScene(sceneNumber) {
 function selectOption(option) {
     const exitId = option.exitid
     const exitTexts = option.exitText
-    if (exitId <= 0) {
+    if (exitId == 0) {
         return startGame()
     }
 
@@ -100,5 +100,5 @@ function selectOption(option) {
 }
 
 function startGame() {
-    ShowNextScene(1)
+    selectOption(textNodes[0].options[0])
 }

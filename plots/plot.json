@@ -2,32 +2,74 @@
 [
     {
         "id" : "startGame",
-        "exitid" : 1
+        "options" : [
+            {
+                "exitid" : 1,
+                "exitText" : [
+                    {
+                        "class" : "narNameplate",
+                        "text" : "Narrator"
+                    },
+                    {
+                        "class" : "nar",
+                        "text" : "As you travel the wandering road, you come at some point to a elderly man sitting on the side of the way. He looks up as you approach, and calls a greeting"
+                    },
+                    {
+                        "class" : "NPCNameplate",
+                        "text" : "Old Man"
+                    },
+                    {
+                        "class" : "NPCChat",
+                        "text" : "Hullo there young one, who might you be?"
+                    }
+                ]
+            }
+        ]
     },
     {
         "id" : 1,
         "options" : [
             {
-                "text" : "Say: Something like that",
+                "text" : "Say: I'm Elisia Wong, from the western counties",
                 "exitid" : 2,
                 "exitText" : [
                     {
+                        "class" : "PCNameplate",
+                        "text" : "You"
+                    },
+                    {
                         "class" : "PCChat",
-                        "text" : "Something like that"
+                        "text" : "I'm Elisia Chan-Sipple, from the western counties"
+                    },
+                    {
+                        "class" : "NPCNameplate",
+                        "text" : "Old Man"
                     },
                     {
                         "class" : "NPCChat",
-                        "text" : "sounds like a good life"
+                        "text" : "And what brings you so far from home? Are you a travaling tinker?"
                     }
                 ]
             },
             {
-                "text" : "a button cuz im a lazy programmer who doesen't want write more story right now",
-                "exitid" : 2,
+                "text" : "I'm just passing through",
+                "exitid" : 3,
                 "exitText" : [
                     {
-                        "class" : "PCChat",
-                        "text" : "hellossssssssssssoo"
+                        "class" : "NPCNameplate",
+                        "text" : "Old Man"
+                    },
+                    {
+                        "class" : "NPCChat",
+                        "text" : "Well then stranger, I wish you luck"
+                    },
+                    {
+                        "class" : "narNameplate",
+                        "text" : "Narrator"
+                    },
+                    {
+                        "class" : "nar",
+                        "text" : "You walk away, and continue down the road<br>The End"
                     }
                 ]
             }
@@ -37,11 +79,11 @@
         "id" : 2,
         "options" : [
             {
-                "text" : "guh",
+                "text" : "Say: More of a wandering soul, I've got no place to be, and no thing that I must do",
                 "exitid" : 0,
                 "exitText" : [
                     {
-                        "class" : "NCChat",
+                        "class" : "nar",
                         "text" : "you made it to the end"
                     }
                 ]
