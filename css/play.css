@@ -19,6 +19,10 @@
     border-radius: 50px;
 }
 
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
 body {
     background-color: rgb(40, 40, 40);
     scrollbar-gutter: stable;
@@ -51,12 +55,12 @@ a:active {
 .playerIcon {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-53%, -53%);
     position: absolute;
     display: block;
-    width: 88%;
-    height: 88%;
-    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cg fill='none'%3E%3Cdefs%3E%3Cmask id='pepiconsPopPersonCircleFilled0'%3E%3Cpath fill='%23fff' d='M0 0h26v26H0z'/%3E%3Cg fill='%23000'%3E%3Cpath fill-rule='evenodd' d='M9 9a4 4 0 1 0 8 0a4 4 0 0 0-8 0m6 0a2 2 0 1 1-4 0a2 2 0 0 1 4 0' clip-rule='evenodd'/%3E%3Cpath d='M20 21a1 1 0 1 1-2 0v-2.5c0-2.494-2.206-4.5-4.984-4.5C10.23 14 8 16.013 8 18.5l.002 2.5a1 1 0 1 1-2 0L6 18.5c0-3.64 3.169-6.5 7.016-6.5C16.86 12 20 14.857 20 18.5z'/%3E%3C/g%3E%3C/mask%3E%3C/defs%3E%3Ccircle cx='13' cy='13' r='13' fill='%23000' mask='url(%23pepiconsPopPersonCircleFilled0)'/%3E%3C/g%3E%3C/svg%3E");
+    width: 85%;
+    height: 85%;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M10.997 17.499c0-1.29.375-2.49 1.022-3.501H6.25A2.25 2.25 0 0 0 4 16.248v.92c0 .572.178 1.13.51 1.596c1.403 1.968 3.617 3.034 6.58 3.21l.522-1.713a6.5 6.5 0 0 1-.615-2.762M11.998 2a5.001 5.001 0 1 1 0 10.002a5.001 5.001 0 0 1 0-10.002M23 17.499a5.5 5.5 0 0 1-8.168 4.813l-2.187.665a.5.5 0 0 1-.624-.624l.666-2.187A5.501 5.501 0 1 1 23 17.498m-7.501-1.5a.5.5 0 1 0 0 1h4a.5.5 0 1 0 0-1zm-.5 2.5a.5.5 0 0 0 .5.5h2a.5.5 0 1 0 0-1h-2a.5.5 0 0 0-.5.5'/%3E%3C/svg%3E");
     background-color: rgb(40, 40, 40);
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
@@ -64,7 +68,43 @@ a:active {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-  }
+}
+
+.inventoryIcon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 90%;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2a3.75 3.75 0 0 0-3.736 3.424A8 8 0 0 0 4 12.5V14h16v-1.5a8 8 0 0 0-4.264-7.076A3.75 3.75 0 0 0 12 2m8 13.714H9.5v1.536a.75.75 0 0 1-1.5 0v-1.536H4v3.036A3.25 3.25 0 0 0 7.25 22h9.5A3.25 3.25 0 0 0 20 18.75zM12 4.5c-.698 0-1.374.09-2.02.257a2.25 2.25 0 0 1 4.04 0A8 8 0 0 0 12 4.5m-4 5.917A2.417 2.417 0 0 1 10.417 8h3.166A2.417 2.417 0 0 1 16 10.417C16 11.29 15.291 12 14.417 12H9.583A1.583 1.583 0 0 1 8 10.417m2.417-.917a.917.917 0 0 0-.917.917c0 .046.037.083.083.083h4.834a.083.083 0 0 0 .083-.083a.917.917 0 0 0-.917-.917z'/%3E%3C/svg%3E");
+    background-color: rgb(40, 40, 40);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.menuIcon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4 18h11c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h8c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h11c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1m17.3 7.88L17.42 12l2.88-2.88a.996.996 0 1 0-1.41-1.41L15.3 11.3a.996.996 0 0 0 0 1.41l3.59 3.59c.39.39 1.02.39 1.41 0c.38-.39.39-1.03 0-1.42'/%3E%3C/svg%3E");
+    background-color: rgb(40, 40, 40);
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
 
 /* Scene formatting */
 .sceneDiv {
@@ -85,9 +125,9 @@ a:active {
 /* Chat view fomatting */
 #chatView {
     position: absolute;
-    margin: 20px;
+    margin: 2.5%;
     width: 35%;
-    height: calc(100% - 100px);
+    height: 85%;
     border-radius: 20px;
     z-index: 1;
     background-color: rgb(40, 40, 40);
@@ -164,6 +204,107 @@ a:active {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
+}
+
+/* Inventory */
+:root {
+    --inventorySize: calc(100/18 * 100%);
+}
+
+#inventoryButton {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    bottom: 0;
+    width: 18%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: rgb(60, 60, 60);
+    transform: translate(-50%, 50%);
+    box-shadow: 0px 0px 4px 2px rgb(30, 30, 30) ;
+}
+
+#inventory {
+    display: none;
+    position: absolute;
+    flex-wrap: wrap;
+    width: calc(100/18 * 100%);
+    bottom: 120%;
+    margin-left: calc(100/18 * 100% * 0.39);
+    translate: -50%;
+}
+
+#inventory:hover > .invItem, #inventoryButton:hover .invItem {
+    position: absolute;
+    max-width: 40%;
+    width: unset;
+    aspect-ratio: 1/1;
+    background-color: rgb(60, 60, 60);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: bookMania-reg;
+    margin: 10%;
+    overflow-y: overlay;
+    border: none;
+    bottom: unset;
+    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30) ;
+    margin-bottom: none;
+}
+
+#inventoryButton:hover > #inventory {
+    display: block;
+}
+
+.invItem:hover {
+    position: absolute;
+    max-width: 40%;
+    width: unset;
+    aspect-ratio: 1/1;
+    background-color: rgb(60, 60, 60);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-family: bookMania-reg;
+    margin: 10%;
+    overflow-y: overlay;
+    border: none;
+    bottom: unset;
+    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30) ;
+    margin-bottom: none;
+}
+
+.invItem {
+    display: inline-block;
+    position: absolute;
+    width: calc(100% / 3);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    margin-bottom: -100%;
+    transform: translateY(50%);
+    transition: all 1s allow-discrete;
+}
+
+#menuButton {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80%;
+    bottom: 0;
+    width: 18%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: 3;
+    background-color: rgb(60, 60, 60);
+    transform: translate(-50%, 50%);
+    box-shadow: 0px 0px 4px 2px rgb(30, 30, 30) ;
 }
 
 /* Input UI */
