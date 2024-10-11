@@ -207,10 +207,6 @@ a:active {
 }
 
 /* Inventory */
-:root {
-    --inventorySize: calc(100/18 * 100%);
-}
-
 #inventoryButton {
     display: block;
     position: absolute;
@@ -231,6 +227,7 @@ a:active {
     display: none;
     position: absolute;
     flex-wrap: wrap;
+    border-radius: 20px;
     width: calc(100/18 * 100%);
     bottom: 120%;
     margin-left: calc(100/18 * 100% * 0.39);
@@ -238,57 +235,65 @@ a:active {
 }
 
 #inventory:hover > .invItem, #inventoryButton:hover .invItem {
-    position: absolute;
-    max-width: 40%;
-    width: unset;
     aspect-ratio: 1/1;
     background-color: rgb(60, 60, 60);
     border-radius: 20px;
     padding: 10px;
     color: white;
     font-family: bookMania-reg;
-    margin: 10%;
-    overflow-y: overlay;
+    overflow-y: scroll;
     border: none;
-    bottom: unset;
-    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30) ;
-    margin-bottom: none;
+    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30);
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
 }
 
-#inventoryButton:hover > #inventory {
-    display: block;
+#inventoryButton:hover > #inventory, #inventoryHoverBridge:hover + #inventory {
+    display: grid;
+    grid-auto-flow: column;
+    column-count: 2;
 }
 
 .invItem:hover {
-    position: absolute;
-    max-width: 40%;
-    width: unset;
     aspect-ratio: 1/1;
     background-color: rgb(60, 60, 60);
     border-radius: 20px;
     padding: 10px;
     color: white;
     font-family: bookMania-reg;
-    margin: 10%;
     overflow-y: overlay;
     border: none;
-    bottom: unset;
-    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30) ;
-    margin-bottom: none;
+    box-shadow: 0px 0px 5px 3px rgb(30, 30, 30);
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
 }
 
 .invItem {
-    display: inline-block;
-    position: absolute;
-    width: calc(100% / 3);
+    display: grid;
+    position: relative;
     aspect-ratio: 1/1;
     border-radius: 50%;
     color: transparent;
     background-color: transparent;
     border: none;
     margin-bottom: -100%;
-    transform: translateY(50%);
-    transition: all 1s allow-discrete;
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+#inventoryHoverBridge {
+    position: absolute;
+    display: none;
+    width: calc(100/18 * 100%);
+    bottom: 50%;
+    margin-left: calc(100/18 * 100% * 0.39);
+    translate: -50%;
+}
+
+#inventoryButton:hover > #inventoryHoverBridge {
+    display: flex;
 }
 
 #menuButton {
