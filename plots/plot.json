@@ -30,7 +30,7 @@
         "id" : 1,
         "options" : [
             {
-                "text" : "Say: I'm Elisia Wong, from the western counties",
+                "text" : "Say: I'm Elisia, from the western counties",
                 "exitid" : 2,
                 "exitText" : [
                     {
@@ -39,7 +39,7 @@
                     },
                     {
                         "class" : "PCChat",
-                        "text" : "I'm Elisia Chan-Sipple, from the western counties"
+                        "text" : "I'm Elisia, from the western counties"
                     },
                     {
                         "class" : "NPCNameplate",
