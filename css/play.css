@@ -251,8 +251,9 @@ a:active {
 
 #inventoryButton:hover > #inventory, #inventoryHoverBridge:hover + #inventory {
     display: grid;
-    grid-auto-flow: column;
-    column-count: 2;
+    grid-auto-flow: row;
+    grid-template-columns: 50% 50%;
+    row-gap: ;
 }
 
 .invItem:hover {
@@ -271,14 +272,13 @@ a:active {
 }
 
 .invItem {
-    display: grid;
-    position: relative;
+    grid-column: span 1 / span 1;
+    grid-row: span 1 / span 1;
     aspect-ratio: 1/1;
     border-radius: 50%;
     color: transparent;
     background-color: transparent;
     border: none;
-    margin-bottom: -100%;
     padding-block: 0;
     padding-inline: 0;
 }

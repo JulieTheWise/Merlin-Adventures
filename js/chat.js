@@ -1,8 +1,11 @@
 const inputUIElement = document.getElementById('inputUI')
 const textBoxElement = document.getElementById('text')
+const inventoryElement = document.getElementById('inventory')
+import { inventoryContents, UpdateInventory } from "./inventory.js"
 
 var textNodes = null
 
+//fetch the plot json
 fetch('../plots/plot.json')
 .then(function (response) {
     return response.json()
@@ -42,9 +45,20 @@ function selectOption(option) {
     if (exitTexts != null) {
         exitTexts.forEach(exitText => { 
             const text = document.createElement('p')
-            text.innerHTML = exitText.text
-            text.classList.add(exitText.class)
-            textBoxElement.appendChild(text)
+            if (exitText.class == "invAdd") {
+                exitText.text.forEach(currentInvItem => {
+                    inventoryContents.push(currentInvItem)
+                })
+                
+                console.log(exitText.text)
+                console.log(inventoryContents)
+                UpdateInventory(inventoryContents, inventoryElement)
+            }
+            else {
+                text.innerHTML = exitText.text
+                text.classList.add(exitText.class)
+                textBoxElement.appendChild(text)
+            }
         })
     }
     ShowNextScene(exitId)
@@ -53,4 +67,3 @@ function selectOption(option) {
 function startGame() {
     selectOption(textNodes[0].options[0])
 }
-

@@ -21,6 +21,20 @@
                     {
                         "class" : "NPCChat",
                         "text" : "Hullo there young one, who might you be?"
+                    },
+                    {
+                        "class" : "invAdd",
+                        "text" : [
+                            {
+                                "name" : "The Greater Sword",
+                                "discription" : "Yeah, your sword is pretty great, but my sword will always be a little greater",
+                                "customhtml" : "<img src='../src/image/greatersword.png' style='max-width: 100%;'>"
+                            },
+                            {
+                                "name" : "A Water Bottle",
+                                "discription" : "A simple thing, but it keeps you hydrated"
+                            }
+                        ]
                     }
                 ]
             }
@@ -30,7 +44,7 @@
         "id" : 1,
         "options" : [
             {
-                "text" : "Say: I'm Elisia Wong, from the western counties",
+                "text" : "Say: I'm Elisia, from the western counties",
                 "exitid" : 2,
                 "exitText" : [
                     {
@@ -39,7 +53,7 @@
                     },
                     {
                         "class" : "PCChat",
-                        "text" : "I'm Elisia Chan-Sipple, from the western counties"
+                        "text" : "I'm Elisia, from the western counties"
                     },
                     {
                         "class" : "NPCNameplate",

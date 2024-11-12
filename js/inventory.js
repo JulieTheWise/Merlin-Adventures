@@ -13,42 +13,31 @@ function SetSize() {
     `
 }
 
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function() {
     SetSize()
 }, true);
 
 SetSize()
 
-let inventoryElement = document.getElementById('inventory'),
-inventoryContents = [  
-    {
-        name: "The Greater Sword",
-        discription: "Yeah, your sword is pretty great, but my sword will always be a little greater",
-        costomhtml: '<img src="../src/image/greatersword.png" style="max-width: 100%;">',
-    },
-    {
-        name: "A Water Bottle",
-        discription: "A simple thing, but it keeps you hydrated",
-    },
-    
-]
+let inventoryElement = document.getElementById('inventory')
+const inventoryContents = []
 
-function UnpdateInventory(inventoryContents) {
+function UpdateInventory(inventoryContents, inventoryElement) {
     while (inventoryElement.firstChild) {
         inventoryElement.removeChild(inventoryElement.firstChild)
     }
 
     inventoryContents.forEach(item => {
-        let costomhtml = ''
-
-        if (item.costomhtml) {
-            costomhtml = item.costomhtml
+        let customhtml = ''
+        if (item.customhtml) {
+            customhtml = item.customhtml
         }
-
         inventoryElement.insertAdjacentHTML('beforeend', `
-            <button class="invItem"><h3>${item.name}</h3><p>${item.discription}</p>${costomhtml}</button>
-            `)
+            <button class="invItem"><h3>${item.name}</h3><p>${item.discription}</p>${customhtml}</button>
+        `)
     });
 }
 
-UnpdateInventory(inventoryContents)
+UpdateInventory(inventoryContents, inventoryElement)
+
+export { inventoryContents, UpdateInventory}
