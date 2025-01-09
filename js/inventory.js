@@ -40,4 +40,4 @@ function UpdateInventory(inventoryContents, inventoryElement) {
 
 UpdateInventory(inventoryContents, inventoryElement)
 
-export { inventoryContents, UpdateInventory}
+export { inventoryContents, UpdateInventory }
